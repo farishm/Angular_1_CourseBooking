@@ -1,0 +1,94 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default panel-table">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <label>{{titleText}}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6 text-left">
+                            <div class="form-horizontal">
+                                <div ng-if="id" class="form-group">
+                                    <label class="control-label col-sm-3">Id:</label>
+                                    <div class="col-sm-9 text-left">
+                                        <label class="control-label col-sm-1">{{id}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" for="#courseTitle">Course Title:</label>
+                                    <div class="col-sm-9">
+                                        <input ng-model="Title" class="form-control" placeholder="Enter course title">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" for="#description">Description:</label>
+                                    <div class="col-sm-9">
+                                        <textarea ng-model="Description" class="form-control" rows="5" placeholder="Enter course description"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" for="#reference">Reference:</label>
+                                    <div class="col-sm-9">
+                                        <input ng-model="Reference" class="form-control" placeholder="Enter course reference">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" for="#duration">Duration - Weeks:</label>
+                                    <div class="col-sm-9">
+                                        <input ng-model="Duration" class="form-control" placeholder="Enter course duration in Weeks">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" for="#fees">Fees - £:</label>
+                                    <div class="col-sm-9">
+                                        <input ng-model="Fees" class="form-control" placeholder="Enter course fees in GBP">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" for="#status">Status:</label>
+                                    <div class="col-sm-9">
+                                        <input ng-model="Status" class="form-control" placeholder="Enter course status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" for="#location">Location:</label>
+                                    <div class="col-sm-9">
+                                        <input ng-model="Location" class="form-control" placeholder="Enter course location">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" for="#totalplaces">Total Places:</label>
+                                    <div class="col-sm-9">
+                                        <input ng-model="TotalPlaces" class="form-control" placeholder="Enter course total places">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" for="#availableplaces">Available Places:</label>
+                                    <div class="col-sm-9">
+                                        <input ng-model="AvailablePlaces" class="form-control" placeholder="Enter course available places">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-9 col-sm-3">
+                                        <button ng-click="save()" class="btn btn-default">
+                                            Save
+                                        </button>
+                                        <button ng-click="goBack()" class="btn">Back</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 text-left">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

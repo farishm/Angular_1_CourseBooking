@@ -1,0 +1,79 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default panel-table">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col col-xs-7">
+                            <label class="control-label">Course List - Click on the titles or use the Search Courses box to view course details.</label>
+                        </div>
+                        <div class="col col-xs-3  text-left">
+                            <course-search></course-search>
+                        </div>
+                        <div class="col col-xs-2 text-right">
+                            <button type="button" class="btn btn-sm btn-primary btn-create" ng-click="gotoAdd()">Create New</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead style=" background-color: lightgrey">
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Reference</th>
+                                    <th>Duration - Weeks</th>
+                                    <th>Fees - £</th>
+                                    <th>Status</th>
+                                    <th>Location</th>
+                                    <th>Total Places</th>
+                                    <th>Available Places</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="course in courses">
+                                    <td ng-click="onSelect(course)">{{ course.Title }}</td>
+                                    <td>{{ course.Reference }}</td>
+                                    <td>{{ course.Duration }}</td>
+                                    <td>{{ course.Fees }}</td>
+                                    <td>{{ course.Status }}</td>
+                                    <td>{{ course.Location }}</td>
+                                    <td>{{ course.TotalPlaces }}</td>
+                                    <td>{{ course.AvailablePlaces }}</td>
+
+                                    <td><button class="btn btn-primary btn-xs" ng-click="gotoEdit(course.Id)" data-toggle="tooltip" data-placement="top" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                                    <td><button class="btn btn-danger btn-xs" ng-click="onDelete(course)" data-toggle="tooltip" data-placement="top" title="Delete"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                </tr>                               
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <div ng-if="detailsSelected" class="panel panel-default">
+                <div class="panel-heading"> Course: {{selectedCourse.title | uppercase}} details</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12 text-left">
+                            {{selectedCourse.description}}
+                        </div>
+                        <div class="col-sm-12 text-left">
+                            <button ng-click="gotoBook()" class="btn btn-default">
+                                Book this Course
+                            </button>
+                            <button class="btn" ng-click="gotoClose()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="deleteSelected" class="panel panel-default">
+                <div class="panel-heading">Plese confirm to delete selected course: {{selectedCourse.title | uppercase}} - <button class="btn btn-danger" ng-click="delete(); $event.stopPropagation()">Confirm</button></div>
+            </div>
+
+        </div>
+    </div>
+</div>

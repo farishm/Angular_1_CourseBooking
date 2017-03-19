@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Booking</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Scripts/app/app.js"></script>
+    <script src="Scripts/app/controller.js"></script>
+    <link rel="shortcut icon" href="">
+</head>
+
+<body ng-app="appBooking">  
+    <nav class="navbar navbar-inverse" style="margin-bottom: 0;border-radius: 0;">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#/">Home</a></li>
+                    <li><a href="#/courseList">Course</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div ng-view></div>
+
+    
+</body>
+</html>
